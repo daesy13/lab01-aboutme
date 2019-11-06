@@ -8,16 +8,16 @@
 // [ ] Display the user’s name back to them in your final message to the user.
 
 var location = prompt('Are you originally from Washington? Yes or No:')
-console.log('location: ', location)
+console.log('location: ' + location)
 
 var coffee = prompt('Do you like coffee? Yes or No:')
-console.log('coffee: ', coffee)
+console.log('coffee: ' + coffee)
 
 var rollerCoaster = prompt('Do you like roller coasters? Yes or No')
-console.log('roller coaster: ', rollerCoaster)
+console.log('roller coaster: ' + rollerCoaster)
 
 var macUser = prompt('Do you prefer Mac computers? Yes or No')
-console.log('mac user: ', macUser)
+console.log('mac user: ' + macUser)
 
 var windowsUser = prompt('Do you prefer Windows computers? Yes or No')
-console.log('windows user: ', windowsUser)
+console.log('windows user: ' + windowsUser)
