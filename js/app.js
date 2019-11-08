@@ -103,7 +103,7 @@ console.log( "user guess num is: " + number)
 var favNum = 33;
 var counter = 1;
 
-while(counter <= 4){
+while(counter < 5){
     number = parseInt(prompt(" Guess my favorite number"));
 
     if (number < 33) {
@@ -128,28 +128,24 @@ while(counter <= 4){
 alert('Nice try! My favorite number is ' + favNum);
 
 // Guess Question 7
-
-userFavFruit = prompt("Can you guess my favorite fruit?").toLocaleLowerCase();
 var fruits = ['apple', 'strawberry', 'orange', 'grape', 'watermelon'];
-var newCounter = 0;
-var flag;
+var userFavFruit;
 
-while (newCounter <= 6 && flag !== true) {
-
-    for (var i = 0; i < fruits.length; i++) {
-        if (userFavFruit !== fruits[i]) {
-            newCounter++;
-            alert('Sorry wrong answer');
-        }
-        else if (userFavFruit === fruits[i]) {
-            alert('Congrats you got it right!!!');
-            score++;
-            break;
-        }
+for (var i = 0; i <=6 ; i++) {
+    userFavFruit = prompt("Can you guess my favorite fruit?").toLowerCase();
+    console.log('user input for fruit ' + userFavFruit);
+    if (fruits.includes(userFavFruit)) {
+        console.log('if statement fruit ' + userFavFruit);
+        alert('Congrats you got it right!!!');
+        score++;
+        break;
     }
-
+    else {
+        alert('Sorry wrong answer, try again');   
+    }
 } 
 
 alert('Nice try! My favorite fruits are: apple, strawberry, orange, grape and watermelon');
 
-alert('Good Job!... You got ' + score + 'correct answers!')
+
+alert('Good Job!... You got ' + score + ' correct answers!')
