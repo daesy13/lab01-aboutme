@@ -116,35 +116,51 @@ console.log('windows user: ' + windowsUser);
 
 noCorrect(windowsUser);
 
-var number = prompt(name + " Guess my favorite number");
+var number = prompt(name + ' Guess my favorite number');
 console.log( "user guess num is: " + number)
 
 // Guess Question 6
 
 var favNum = 33;
 var counter = 1;
-
-while(counter < 5){
-    number = parseInt(prompt(" Guess my favorite number"));
-
-    if (number < 33) {
-        alert('you guessed too low');
-        counter++;
+var number = parseInt(prompt('Guess my favorite number'));
+function guessFavNumber(guess, favNumber) {
+    while (!33 && counter < 5) {
+        if (number > 33) {
+            number = parseInt(prompt('You guessed too high! Guess again'));
+            counter++;
+        } else if (number < 33) {
+            number = parseInt(prompt('You guessed too low! Guess again'));
+            counter++;
+        }
     }
-    else if (number > 33) {
-        alert('you guessed too high');
-        counter++;
-    }
-    else if (number === NaN || number === null) {
-        alert('please enter a real number');
-        counter++;
-    }
-    else if (number == 33) {
-        alert('Congrats you got it right!!!');
+    if (number === 33) {
+        alert('That is correct! My favorite number is 33!');
         score++;
-        break;
     }
 }
+guessFavNumber(guess, favNum);
+// while(counter < 5){
+//     number = parseInt(prompt(" Guess my favorite number"));
+
+//     if (number < 33) {
+//         alert('you guessed too low');
+//         counter++;
+//     }
+//     else if (number > 33) {
+//         alert('you guessed too high');
+//         counter++;
+//     }
+//     else if (number === NaN || number === null) {
+//         alert('please enter a real number');
+//         counter++;
+//     }
+//     else if (number == 33) {
+//         alert('Congrats you got it right!!!');
+//         score++;
+//         break;
+//     }
+// }
 
 alert('Nice try! My favorite number is ' + favNum);
 
@@ -155,12 +171,12 @@ function questionSeven() {
 
     for (var i = 0; i < 6; i++) {
         var userAnsw = prompt('Can you guess my favorite fruit?');
-        var guess = answer1.toLowerCase();
+        var guess = userAnsw.toLowerCase();
 
         for (var j = 0; j < userFavFruit.length; j++){
-            if (guess === degree[j]) {
+            if (guess === userFavFruit[j]) {
                 alert('Congrats you got it right!!!');
-                total++;
+                score++;    
                 i = 6;
                 break;
             }
@@ -176,4 +192,4 @@ questionSeven();
 alert('My favorite fruits are: apple, strawberry, orange, grape and watermelon');
 
 
-alert('Good Job!... You got ' + score + ' correct answers!')
+alert('Good Job!... You got ' + score + ' correct answers!');
