@@ -145,7 +145,7 @@ for (var i = 0; i <=6 ; i++) {
     }
 } 
 
-alert('Nice try! My favorite fruits are: apple, strawberry, orange, grape and watermelon');
+alert('My favorite fruits are: apple, strawberry, orange, grape and watermelon');
 
 
 alert('Good Job!... You got ' + score + ' correct answers!')
