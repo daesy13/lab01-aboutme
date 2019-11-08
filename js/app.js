@@ -8,6 +8,56 @@ alert('Hi ' + name + ', Welcome to my page!');
 alert('let\'s play a guessing game about me. Only Yes or No answers are valid.')
 
 // FUNCTION EXAMPLE USING WHILE - LECTURE EXAMPLE
+// function questionOne(){
+//     var expected = false;
+//     // if they didn't answer waht we wanted, keep trying...
+//     while (!expected) {
+//         var city = prompt('am i from charleston?');
+//         console.log('city: ', city);
+//         var home = city.toLocaleLowerCase();
+//         if (home === 'yes'){
+//             alert('correct');
+//             total++;
+//             expected = true;
+//         }
+//     }
+// }
+// END OF LECTURE WHILE LOOP
+
+// FUNCTION EXAMPLE USING DO WHILE - LECTURE EXAMPLE
+// function questionTwo() {
+//     var expected = false;
+//     do {
+//         var state =  prompt('am i from south carolina');
+//         //console.log('state:' , state);
+//         var region = state.toLowerCase();
+//     }
+// }
+// END OF LECTURE DO WHILE LOOP
+
+// FUNCTION EXAMPLE Q7 - LECTURE EXAMPLE
+// function questionSeven() {
+//     var degree = ['apple', 'strawberry', 'orange', 'grape', 'watermelon'];
+
+//     for (var i = 0; i < 6; i++) {
+//         var answer1 = prompt('what type of degree did you have');
+//         var guess = answer1.toLowerCase();
+
+//         for (var j = 0; j < degree.length; j++){
+//             if (guess === degree[j]) {
+//                 alert('nice job')
+//                 total++;
+//                 i = 6;
+//                 break;
+//             }
+//         }
+//         if (i !==6){
+//             alert('try again')
+//         }
+//     }
+// }
+// END OF LECTURE Q7
+
 
 function yesCorrect (question) {
     if (question.toUpperCase() === 'YES') {
@@ -99,22 +149,29 @@ while(counter < 5){
 alert('Nice try! My favorite number is ' + favNum);
 
 // Guess Question 7
-var fruits = ['apple', 'strawberry', 'orange', 'grape', 'watermelon'];
-var userFavFruit;
 
-for (var i = 0; i <=6 ; i++) {
-    userFavFruit = prompt("Can you guess my favorite fruit?").toLowerCase();
-    console.log('user input for fruit ' + userFavFruit);
-    if (fruits.includes(userFavFruit)) {
-        console.log('if statement fruit ' + userFavFruit);
-        alert('Congrats you got it right!!!');
-        score++;
-        break;
+function questionSeven() {
+    var userFavFruit = ['apple', 'strawberry', 'orange', 'grape', 'watermelon'];
+
+    for (var i = 0; i < 6; i++) {
+        var userAnsw = prompt('Can you guess my favorite fruit?');
+        var guess = answer1.toLowerCase();
+
+        for (var j = 0; j < userFavFruit.length; j++){
+            if (guess === degree[j]) {
+                alert('Congrats you got it right!!!');
+                total++;
+                i = 6;
+                break;
+            }
+        }
+        if (i !==6){
+            alert('Sorry wrong answer, try again');
+        }
     }
-    else {
-        alert('Sorry wrong answer, try again');   
-    }
-} 
+}
+
+questionSeven();
 
 alert('My favorite fruits are: apple, strawberry, orange, grape and watermelon');
 
