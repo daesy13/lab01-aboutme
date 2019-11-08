@@ -14,7 +14,7 @@
 // [x] Display all the possible correct answers to the user.
 // [x] Consider using a loop of some sort for this question.
 // * As a user, I would like to know my final score so that I can know how well I did.
-// [ ] Keep track of the total number of correct answers. At the end tell them how many they got correct out of the 7 questions asked.
+// [x] Keep track of the total number of correct answers. At the end tell them how many they got correct out of the 7 questions asked.
 // [x] In addition to the user stories stated above, continue to use console.logs throughout the code to track the questions that are being asked to the user, and add addtional CSS to style your HTML page.
 
 // Stay within scope of what was taught so far in class. Do not write functions within your application. Work with the instructional staff directly if you have questions about this requirement.
