@@ -5,14 +5,15 @@ var name = prompt('What is your name?');
 console.log('User name: ' + name);
 
 alert('Hi ' + name + ', Welcome to my page!');
-alert('let\'s play a guessing game about me. Only Yes or No answers are valid.')
+alert('let\'s play a guessing game about me. \nOnly Yes or No answers are valid.');
 
 function yesCorrect (question) {
     if (question.toUpperCase() === 'YES') {
+        score++;
         alert("Yes!, you are right.");
     }
     else if (question.toUpperCase() === 'NO'){
-        alert("Sorry, wrong answer try again.");
+        alert("Sorry, wrong answer.");
     }
     else {
         alert("This answer is not valid");
@@ -21,9 +22,10 @@ function yesCorrect (question) {
 
 function noCorrect (question) {
     if (question.toUpperCase() === 'YES') {
-        alert("Sorry, wrong answer try again.");
+        alert("Sorry, wrong answer.");
     }
     else if (question.toUpperCase() === 'NO'){
+        score++;
         alert("Yes! you are right.");
     }
     else {
